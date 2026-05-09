@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "the_crimson_depths",
+  "version": "${version}",
+  "name": "The Crimson Depths",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/the_crimson_depths/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "arsenal.the_crimson_depths.client.The_crimson_depthsDataGenerator"
+    ],
+    "client": [
+      "arsenal.the_crimson_depths.client.The_crimson_depthsClient"
+    ],
+    "main": [
+      "arsenal.the_crimson_depths.The_crimson_depths"
+    ]
+  },
+  "mixins": [
+    "the_crimson_depths.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
