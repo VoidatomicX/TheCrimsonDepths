@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "armory:item/ametherite_scythe"
+		"layer0": "the_crimson_depths:item/crimson_scythe"
 	},
 	"display": {
 		"thirdperson_righthand": {
