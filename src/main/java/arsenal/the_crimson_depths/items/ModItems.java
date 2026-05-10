@@ -23,8 +23,6 @@ public class ModItems {
     public static void registerModItems() {
         The_crimson_depths.LOGGER.info("Registering Mod Items for " + The_crimson_depths.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
-            entries.add(Crimson_Scythe);
-        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> entries.add(Crimson_Scythe));
     }
 }
