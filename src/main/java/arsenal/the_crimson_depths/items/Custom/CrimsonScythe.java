@@ -7,6 +7,7 @@ import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
 
 public class CrimsonScythe extends SwordItem {
+
     public CrimsonScythe(ToolMaterial toolMaterial, Settings settings) {super(toolMaterial, settings);
     }
 
@@ -18,7 +19,7 @@ public class CrimsonScythe extends SwordItem {
             double dz = attacker.getZ() - target.getZ();
             double dy = attacker.getY() - target.getY();
 
-            double strength = 0.7;
+            double strength = 0.9;
             double distance = Math.sqrt(dx * dx + dz * dz);
 
             if (distance > 0) {

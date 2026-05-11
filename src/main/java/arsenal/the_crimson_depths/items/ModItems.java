@@ -2,6 +2,7 @@ package arsenal.the_crimson_depths.items;
 
 import arsenal.the_crimson_depths.The_crimson_depths;
 import arsenal.the_crimson_depths.items.Custom.CrimsonScythe;
+import arsenal.the_crimson_depths.items.Custom.SunkenAnchor;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -14,6 +15,9 @@ public class ModItems {
             new CrimsonScythe(ToolMaterials.NETHERITE, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 5, -2.8f))));
 
+    public static final Item Sunken_Anchor = registerItem("sunken_anchor",
+            new SunkenAnchor(ToolMaterials.NETHERITE, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 7, -3.1f))));
 
 
     private static Item registerItem(String name, Item item) {
@@ -23,6 +27,10 @@ public class ModItems {
     public static void registerModItems() {
         The_crimson_depths.LOGGER.info("Registering Mod Items for " + The_crimson_depths.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> entries.add(Crimson_Scythe));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
+            entries.add(Crimson_Scythe);
+            entries.add(Sunken_Anchor);
+
+        });
     }
 }
