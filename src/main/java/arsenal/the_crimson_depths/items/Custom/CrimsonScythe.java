@@ -2,13 +2,13 @@ package arsenal.the_crimson_depths.items.Custom;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.SwordItem;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.*;
+import net.minecraft.registry.tag.BlockTags;
 
-public class CrimsonScythe extends SwordItem {
+public class CrimsonScythe extends MiningToolItem {
 
-    public CrimsonScythe(ToolMaterial toolMaterial, Settings settings) {super(toolMaterial, settings);
+    public CrimsonScythe(ToolMaterial toolMaterial, Item.Settings settings) {
+        super(toolMaterial, BlockTags.HOE_MINEABLE, settings);
     }
 
     @Override
