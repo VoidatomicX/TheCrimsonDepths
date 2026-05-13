@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "the_crimson_depths:item/sunken_anchor"
+		"layer0": "the_crimson_depths:item/gold_anchor"
 	},
 	"display": {
 		"thirdperson_righthand": {

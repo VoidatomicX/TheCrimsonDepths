@@ -5,9 +5,9 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.tag.BlockTags;
 
-public class CrimsonScythe extends MiningToolItem {
+public class ScytheItem extends MiningToolItem {
 
-    public CrimsonScythe(ToolMaterial toolMaterial, Item.Settings settings) {
+    public ScytheItem(ToolMaterial toolMaterial, Item.Settings settings) {
         super(toolMaterial, BlockTags.HOE_MINEABLE, settings);
     }
 

@@ -4,6 +4,7 @@
   "package": "arsenal.the_crimson_depths.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "PlayerEntityMixin"
   ],
   "client": [
   ],
