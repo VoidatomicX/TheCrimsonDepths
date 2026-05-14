@@ -12,13 +12,51 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    public static final Item Crimson_Scythe = registerItem("crimson_scythe",
+    public static final Item Netherite_Scythe = registerItem("netherite_scythe",
             new ScytheItem(ToolMaterials.NETHERITE, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 5, -2.8f))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 6, -2.8f))));
+
+    public static final Item Diamond_Scythe = registerItem("diamond_scythe",
+            new ScytheItem(ToolMaterials.DIAMOND, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 5, -2.8f))));
+
+    public static final Item Gold_Scythe = registerItem("gold_scythe",
+            new ScytheItem(ToolMaterials.GOLD, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.GOLD, 6, -2.7f))));
+
+    public static final Item Iron_Scythe = registerItem("iron_scythe",
+            new ScytheItem(ToolMaterials.IRON, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON, 4, -2.9f))));
+
+    public static final Item Stone_Scythe = registerItem("stone_scythe",
+            new ScytheItem(ToolMaterials.STONE, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.STONE, 2, -3.1f))));
+
+
+
 
     public static final Item Netherite_Lance = registerItem("netherite_lance",
             new LanceItem(ToolMaterials.NETHERITE, new Item.Settings()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 5, -2.8f))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 6, -2.9f))));
+
+    public static final Item Diamond_Lance = registerItem("diamond_lance",
+            new LanceItem(ToolMaterials.DIAMOND, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.DIAMOND, 5, -2.8f))));
+
+    public static final Item Gold_Lance = registerItem("gold_lance",
+            new LanceItem(ToolMaterials.GOLD, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.GOLD, 6, -2.7f))));
+
+    public static final Item Iron_Lance = registerItem("iron_lance",
+            new LanceItem(ToolMaterials.IRON, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.IRON, 4, -3f))));
+
+    public static final Item Stone_Lance = registerItem("stone_lance",
+            new LanceItem(ToolMaterials.STONE, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.STONE, 3, -3.1f))));
+
+
+
 
     public static final Item Netherite_Anchor = registerItem("netherite_anchor",
             new AnchorItem(ToolMaterials.NETHERITE, new Item.Settings().fireproof()
@@ -49,8 +87,16 @@ public class ModItems {
         The_crimson_depths.LOGGER.info("Registering Mod Items for " + The_crimson_depths.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
-            entries.add(Crimson_Scythe);
+            entries.add(Netherite_Scythe);
+            entries.add(Diamond_Scythe);
+            entries.add(Gold_Scythe);
+            entries.add(Iron_Scythe);
+            entries.add(Stone_Scythe);
             entries.add(Netherite_Lance);
+            entries.add(Diamond_Lance);
+            entries.add(Gold_Lance);
+            entries.add(Iron_Lance);
+            entries.add(Stone_Lance);
             entries.add(Netherite_Anchor);
             entries.add(Diamond_Anchor);
             entries.add(Gold_Anchor);

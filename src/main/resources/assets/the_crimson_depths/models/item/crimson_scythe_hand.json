@@ -1,6 +1,0 @@
-{
-	"parent": "item/handheld",
-	"textures": {
-		"layer0": "the_crimson_depths:item/crimson_scythe_hand"
-	}
-}

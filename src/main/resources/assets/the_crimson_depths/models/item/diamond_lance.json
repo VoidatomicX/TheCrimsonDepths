@@ -3,7 +3,7 @@
 	"credit": "Made with Blockbench",
 	"parent": "minecraft:item/generated",
 	"textures": {
-		"layer0": "the_crimson_depths:item/crimson_scythe"
+		"layer0": "the_crimson_depths:item/diamond_lance"
 	},
 	"display": {
 		"thirdperson_righthand": {
