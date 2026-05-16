@@ -1,5 +1,6 @@
 package arsenal.the_crimson_depths;
 
+import arsenal.the_crimson_depths.blocks.ModBlocks;
 import arsenal.the_crimson_depths.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -13,6 +14,7 @@ public class The_crimson_depths implements ModInitializer {
     @Override
     public void onInitialize() {
         ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
 
     }
 }

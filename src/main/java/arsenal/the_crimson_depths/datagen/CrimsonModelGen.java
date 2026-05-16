@@ -5,9 +5,9 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 
-public class CrimsonModelgen extends FabricModelProvider {
+public class CrimsonModelGen extends FabricModelProvider {
 
-    public CrimsonModelgen(FabricDataOutput output) {
+    public CrimsonModelGen(FabricDataOutput output) {
         super(output);
     }
 
