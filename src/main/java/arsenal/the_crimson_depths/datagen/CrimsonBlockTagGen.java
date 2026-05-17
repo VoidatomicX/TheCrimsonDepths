@@ -16,10 +16,12 @@ public class CrimsonBlockTagGen extends FabricTagProvider.BlockTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
-                .add(ModBlocks.Infested_Redstone_Block);
+                .add(ModBlocks.Infested_Redstone_Block)
+                .add(ModBlocks.Resonite_block);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.Infested_Redstone_Block);
+                .add(ModBlocks.Infested_Redstone_Block)
+                .add(ModBlocks.Resonite_block);
 
         /*getOrCreateTagBuilder(ModTags.Blocks.NEEDS_RESONITE_TOOL)
                 .add(ModBlocks.Infested_Redstone_Block)

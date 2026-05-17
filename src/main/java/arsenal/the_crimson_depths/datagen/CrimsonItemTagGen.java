@@ -86,5 +86,11 @@ public class CrimsonItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.Gold_Anchor)
                 .add(ModItems.Iron_Anchor)
                 .add(ModItems.Stone_Anchor);
+
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.Resonite_Helmet)
+                .add(ModItems.Resonite_Chestplate)
+                .add(ModItems.Resonite_Leggings)
+                .add(ModItems.Resonite_Boots);
     }
 }

@@ -30,6 +30,8 @@ public class CrimsonRecipeGen extends FabricRecipeProvider {
         offerSmelting(recipeExporter, Resonite_Smeltables, RecipeCategory.MISC, ModItems.Resonite_Ingot, 0.25f,208,"resonite_ingot");
         offerBlasting(recipeExporter, Resonite_Smeltables, RecipeCategory.MISC, ModItems.Resonite_Ingot, 0.25f,104,"resonite_ingot");
 
+        offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModItems.Resonite_Ingot, RecipeCategory.DECORATIONS, ModBlocks.Resonite_block);
+//Tools
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.Diamond_Anchor, 1)
                 .pattern("RRR")
                 .pattern(" BR")
@@ -38,6 +40,16 @@ public class CrimsonRecipeGen extends FabricRecipeProvider {
                 .input('R', Items.DIAMOND)
                 .input('B', Blocks.DIAMOND_BLOCK)
                 .criterion(hasItem(ModItems.Diamond_Anchor), conditionsFromItem(ModItems.Diamond_Anchor))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.Resonite_Anchor, 1)
+                .pattern("RRR")
+                .pattern(" BR")
+                .pattern("S R")
+                .input('S', Items.STICK)
+                .input('R', ModItems.Resonite_Ingot)
+                .input('B', ModBlocks.Resonite_block)
+                .criterion(hasItem(ModItems.Resonite_Anchor), conditionsFromItem(ModItems.Resonite_Anchor))
                 .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.Gold_Anchor, 1)
@@ -79,6 +91,15 @@ public class CrimsonRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.Diamond_Scythe), conditionsFromItem(ModItems.Diamond_Scythe))
                 .offerTo(recipeExporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.Resonite_Scythe, 1)
+                .pattern("RRR")
+                .pattern(" S ")
+                .pattern("S  ")
+                .input('S', Items.STICK)
+                .input('R', ModItems.Resonite_Ingot)
+                .criterion(hasItem(ModItems.Resonite_Scythe), conditionsFromItem(ModItems.Resonite_Scythe))
+                .offerTo(recipeExporter);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.Gold_Scythe, 1)
                 .pattern("RRR")
                 .pattern(" S ")
@@ -115,6 +136,15 @@ public class CrimsonRecipeGen extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.Diamond_Lance), conditionsFromItem(ModItems.Diamond_Lance))
                 .offerTo(recipeExporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.Resonite_Lance, 1)
+                .pattern(" RR")
+                .pattern(" SR")
+                .pattern("S  ")
+                .input('S', Items.STICK)
+                .input('R', ModItems.Resonite_Ingot)
+                .criterion(hasItem(ModItems.Resonite_Lance), conditionsFromItem(ModItems.Resonite_Lance))
+                .offerTo(recipeExporter);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.Gold_Lance, 1)
                 .pattern(" RR")
                 .pattern(" SR")
@@ -140,6 +170,40 @@ public class CrimsonRecipeGen extends FabricRecipeProvider {
                 .input('S', Items.STICK)
                 .input('R', Items.COBBLESTONE)
                 .criterion(hasItem(ModItems.Stone_Lance), conditionsFromItem(ModItems.Stone_Lance))
+                .offerTo(recipeExporter);
+
+
+//Armor
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.Resonite_Helmet, 1)
+                .pattern("   ")
+                .pattern("SSS")
+                .pattern("S S")
+                .input('S', ModItems.Resonite_Ingot)
+                .criterion(hasItem(ModItems.Resonite_Helmet), conditionsFromItem(ModItems.Resonite_Helmet))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.Resonite_Chestplate, 1)
+                .pattern("S S")
+                .pattern("SSS")
+                .pattern("SSS")
+                .input('S', ModItems.Resonite_Ingot)
+                .criterion(hasItem(ModItems.Resonite_Chestplate), conditionsFromItem(ModItems.Resonite_Chestplate))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.Resonite_Leggings, 1)
+                .pattern("SSS")
+                .pattern("S S")
+                .pattern("S S")
+                .input('S', ModItems.Resonite_Ingot)
+                .criterion(hasItem(ModItems.Resonite_Leggings), conditionsFromItem(ModItems.Resonite_Leggings))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.Resonite_Boots, 1)
+                .pattern("   ")
+                .pattern("S S")
+                .pattern("S S")
+                .input('S', ModItems.Resonite_Ingot)
+                .criterion(hasItem(ModItems.Resonite_Boots), conditionsFromItem(ModItems.Resonite_Boots))
                 .offerTo(recipeExporter);
 
 

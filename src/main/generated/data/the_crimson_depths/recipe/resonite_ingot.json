@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "the_crimson_depths:resonite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "the_crimson_depths:resonite_ingot"
+  }
+}

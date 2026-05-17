@@ -94,6 +94,24 @@ public class ModItems {
     public static final Item Resonite_Ingot = registerItem("resonite_ingot", new Item(new Item.Settings()));
     public static final Item Raw_Resonite = registerItem("raw_resonite", new Item(new Item.Settings()));
 
+    //Resonite Armor
+
+    public static final Item Resonite_Helmet = registerItem("resonite_helmet",
+            new ArmorItem(ResoniteArmorMaterials.RESONITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(25))));
+
+    public static final Item Resonite_Chestplate = registerItem("resonite_chestplate",
+            new ArmorItem(ResoniteArmorMaterials.RESONITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(25))));
+
+    public static final Item Resonite_Leggings = registerItem("resonite_leggings",
+            new ArmorItem(ResoniteArmorMaterials.RESONITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(25))));
+
+    public static final Item Resonite_Boots = registerItem("resonite_boots",
+            new ArmorItem(ResoniteArmorMaterials.RESONITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(25))));
+
 
 
     private static Item registerItem(String name, Item item) {
@@ -128,6 +146,13 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
          fabricItemGroupEntries.add(Raw_Resonite);
          fabricItemGroupEntries.add(Resonite_Ingot);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(fabricItemGroupEntries -> {
+         fabricItemGroupEntries.add(Resonite_Helmet);
+         fabricItemGroupEntries.add(Resonite_Chestplate);
+         fabricItemGroupEntries.add(Resonite_Leggings);
+         fabricItemGroupEntries.add(Resonite_Boots);
         });
     }
 }

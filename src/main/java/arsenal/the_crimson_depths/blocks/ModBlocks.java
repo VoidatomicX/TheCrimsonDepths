@@ -12,10 +12,14 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
-public class ModBlocks {
+    public class ModBlocks {
     public static final Block Infested_Redstone_Block = registerBlock("infested_redstone_block",
             new Block(AbstractBlock.Settings.create().strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.SCULK)));
+
+    public static final Block Resonite_block = registerBlock("resonite_block",
+            new Block(AbstractBlock.Settings.create().strength(3f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER)));
 
 
     private static Block registerBlock(String name, Block block) {
@@ -33,6 +37,10 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
             entries.add(ModBlocks.Infested_Redstone_Block);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
+            entries.add(ModBlocks.Resonite_block);
         });
     }
 }

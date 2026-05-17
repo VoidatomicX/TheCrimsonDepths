@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "R": {
+      "item": "the_crimson_depths:resonite_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " RR",
+    " SR",
+    "S  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "the_crimson_depths:resonite_lance"
+  }
+}
