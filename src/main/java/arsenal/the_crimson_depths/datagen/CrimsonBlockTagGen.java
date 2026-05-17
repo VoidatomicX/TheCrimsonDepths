@@ -21,5 +21,9 @@ public class CrimsonBlockTagGen extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.Infested_Redstone_Block);
 
+        /*getOrCreateTagBuilder(ModTags.Blocks.NEEDS_RESONITE_TOOL)
+                .add(ModBlocks.Infested_Redstone_Block)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);*/
+
     }
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 104,
+  "experience": 0.25,
+  "group": "resonite_ingot",
+  "ingredient": {
+    "item": "the_crimson_depths:infested_redstone_block"
+  },
+  "result": {
+    "id": "the_crimson_depths:resonite_ingot"
+  }
+}

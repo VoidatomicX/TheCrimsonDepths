@@ -60,7 +60,7 @@ public abstract class PlayerEntityMixin {
 
                             case 6, 7, 8 -> 3; // Diamond
 
-                            default -> 4; // Netherite / Modded
+                            default -> 5; // Netherite / Modded
                         };
 
                         armorStack.damage(
