@@ -92,5 +92,14 @@ public class CrimsonItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.Resonite_Chestplate)
                 .add(ModItems.Resonite_Leggings)
                 .add(ModItems.Resonite_Boots);
+
+        getOrCreateTagBuilder(ItemTags.TRIDENT_ENCHANTABLE)
+                .add(ModItems.Netherite_Anchor)
+                .add(ModItems.Diamond_Anchor)
+                .add(ModItems.Resonite_Anchor)
+                .add(ModItems.Gold_Anchor)
+                .add(ModItems.Iron_Anchor)
+                .add(ModItems.Stone_Anchor);
+
     }
 }
