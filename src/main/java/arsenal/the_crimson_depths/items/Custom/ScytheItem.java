@@ -1,15 +1,18 @@
 package arsenal.the_crimson_depths.items.Custom;
 
+import arsenal.the_crimson_depths.api.BoxHitEffectItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.tag.BlockTags;
 
-public class ScytheItem extends MiningToolItem {
+public class ScytheItem extends MiningToolItem implements BoxHitEffectItem {
 
     public ScytheItem(ToolMaterial toolMaterial, Item.Settings settings) {
         super(toolMaterial, BlockTags.HOE_MINEABLE, settings);
     }
+
+
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {

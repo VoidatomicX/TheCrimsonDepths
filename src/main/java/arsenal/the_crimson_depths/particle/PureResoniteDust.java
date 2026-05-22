@@ -18,11 +18,14 @@ public class PureResoniteDust extends SpriteBillboardParticle {
 
         this.velocityMultiplier = 0.8f;
 
-        this.maxAge = 60; // longer lifetime
+        this.maxAge = 60;
 
         this.red = 1f;
-        this.green = 1f;
-        this.blue = 1f;
+
+        this.scale = 0.1f;
+
+        // random starting rotation
+        this.angle = this.random.nextFloat() * ((float)Math.PI * 2F);
 
         this.setSprite(spriteProvider.getSprite(0, 5));
     }
@@ -31,7 +34,13 @@ public class PureResoniteDust extends SpriteBillboardParticle {
     public void tick() {
         super.tick();
 
-        // Stay on each frame for 10 ticks
+        // Save previous angle for smooth interpolation
+        this.prevAngle = this.angle;
+
+        // Rotation speed
+        this.angle += 0.15f;
+
+        // Animation frames
         int frame = Math.min(this.age / 10, 5);
 
         this.setSprite(this.spriteProvider.getSprite(frame, 5));
@@ -60,7 +69,9 @@ public class PureResoniteDust extends SpriteBillboardParticle {
                     world,
                     x, y, z,
                     this.spriteProvider,
-                    velocityX, velocityY, velocityZ
+                    velocityX,
+                    velocityY,
+                    velocityZ
             );
         }
     }
