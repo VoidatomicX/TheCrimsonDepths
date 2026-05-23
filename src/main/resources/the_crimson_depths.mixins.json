@@ -4,7 +4,6 @@
   "package": "arsenal.the_crimson_depths.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "LivingEntityMixin",
     "PlayerEntityMixin",
     "SculkBlockMixin"
   ],

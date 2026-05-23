@@ -12,7 +12,8 @@ import java.util.Objects;
 import java.util.function.Supplier;
 
 public enum ResoniteToolMaterials implements ToolMaterial {
-    RESONITE(ModTags.Blocks.INCORRECT_FOR_RESONITE_TOOL, 1694, 13.0F, 2.0F, 15, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.Resonite_Ingot})),;
+    RESONITE(ModTags.Blocks.INCORRECT_FOR_RESONITE_TOOL, 1694, 13.0F, 2.0F, 15, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.Resonite_Ingot})),
+    PURERESONITE(ModTags.Blocks.INCORRECT_FOR_RESONITE_TOOL, 2031, 14.0F, 4.5F, 22, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.Resonite_Ingot}));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

@@ -13,6 +13,10 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 //Scythe
+    public static final Item Pure_Resonite_Scythe = registerItem("pure_resonite_scythe",
+            new ScytheItem(ResoniteToolMaterials.PURERESONITE, new Item.Settings().fireproof()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ResoniteToolMaterials.PURERESONITE, 7, -2.5f))));
+
     public static final Item Netherite_Scythe = registerItem("netherite_scythe",
             new ScytheItem(ToolMaterials.NETHERITE, new Item.Settings().fireproof()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ToolMaterials.NETHERITE, 5, -2.8f))));
@@ -122,6 +126,7 @@ public class ModItems {
         The_crimson_depths.LOGGER.info("Registering Mod Items for " + The_crimson_depths.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
+            entries.add(Pure_Resonite_Scythe);
             entries.add(Netherite_Scythe);
             entries.add(Diamond_Scythe);
             entries.add(Resonite_Scythe);

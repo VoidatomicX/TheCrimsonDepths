@@ -18,11 +18,11 @@ public class PureResoniteDust extends SpriteBillboardParticle {
 
         this.velocityMultiplier = 0.8f;
 
-        this.maxAge = 60;
+        this.maxAge = 40;
 
         this.red = 1f;
 
-        this.scale = 0.1f;
+        this.scale = 0.09f;
 
         // random starting rotation
         this.angle = this.random.nextFloat() * ((float)Math.PI * 2F);

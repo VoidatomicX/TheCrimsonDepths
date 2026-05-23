@@ -1,18 +1,57 @@
 package arsenal.the_crimson_depths.items.Custom;
 
 import arsenal.the_crimson_depths.api.BoxHitEffectItem;
+import arsenal.the_crimson_depths.entity.ScytheEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
+import net.minecraft.world.World;
 
-public class ScytheItem extends MiningToolItem implements BoxHitEffectItem {
+public class ScytheItem extends MiningToolItem {
 
     public ScytheItem(ToolMaterial toolMaterial, Item.Settings settings) {
         super(toolMaterial, BlockTags.HOE_MINEABLE, settings);
     }
 
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 
+        // Only block usage in non-creative
+        if (!user.getAbilities().creativeMode &&
+                user.getItemCooldownManager().isCoolingDown(this)) {
+
+            return TypedActionResult.pass(user.getStackInHand(hand));
+        }
+
+        // Only apply cooldown in survival/adventure
+        if (!user.getAbilities().creativeMode) {
+            user.getItemCooldownManager().set(this, 20);
+        }
+
+        if (!world.isClient) {
+
+            ScytheEntity scythe = new ScytheEntity(world, user);
+
+            scythe.setPosition(user.getEyePos());
+
+            scythe.setVelocity(
+                    user,
+                    user.getPitch(),
+                    user.getYaw(),
+                    0,
+                    0.5f,
+                    0
+            );
+
+            world.spawnEntity(scythe);
+        }
+
+        return TypedActionResult.consume(user.getStackInHand(hand));
+    }
 
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
@@ -30,7 +69,7 @@ public class ScytheItem extends MiningToolItem implements BoxHitEffectItem {
                 dz /= distance;
                 dy /= distance;
 
-                target.addVelocity(dx * strength, 0.2, dz * strength);
+                target.addVelocity(dx * strength, dy/2, dz * strength);
                 target.velocityModified = true;
             }
         }

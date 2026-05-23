@@ -1,7 +1,7 @@
-// 1.21.1	2026-05-19T17:24:33.7792884	The Crimson Depths/Tags for minecraft:item
+// 1.21.1	2026-05-23T12:09:22.2673596	The Crimson Depths/Tags for minecraft:item
 33f607dd28895e731b6a7187cd7d24fda98cf0b8 data\minecraft\tags\item\shovels.json
-f63fdbd3719c8ce2876b1bbb3373a4547c5ff10b data\minecraft\tags\item\hoes.json
 02a910eba099e1d22395ec8415aca24500579150 data\minecraft\tags\item\pickaxes.json
+f63fdbd3719c8ce2876b1bbb3373a4547c5ff10b data\minecraft\tags\item\hoes.json
 aa44600e336fb2720f3a33cf42da3d6b7bfb1d1f data\minecraft\tags\item\enchantable\sword.json
 02a910eba099e1d22395ec8415aca24500579150 data\minecraft\tags\item\enchantable\trident.json
 78a7f75857d715b3f3dd6d01cedd1d64f9cc8643 data\minecraft\tags\item\enchantable\fire_aspect.json

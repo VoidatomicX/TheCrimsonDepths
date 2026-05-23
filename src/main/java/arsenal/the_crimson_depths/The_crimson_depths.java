@@ -1,6 +1,7 @@
 package arsenal.the_crimson_depths;
 
 import arsenal.the_crimson_depths.blocks.ModBlocks;
+import arsenal.the_crimson_depths.entity.ModEntities;
 import arsenal.the_crimson_depths.items.ModItems;
 import arsenal.the_crimson_depths.particle.CrimsonModParticles;
 import net.fabricmc.api.ModInitializer;
@@ -17,6 +18,7 @@ public class The_crimson_depths implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         CrimsonModParticles.registerParticles();
+        ModEntities.registerModEntities();
 
     }
 }
