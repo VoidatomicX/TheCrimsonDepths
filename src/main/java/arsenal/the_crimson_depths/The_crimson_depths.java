@@ -1,6 +1,7 @@
 package arsenal.the_crimson_depths;
 
 import arsenal.the_crimson_depths.blocks.ModBlocks;
+import arsenal.the_crimson_depths.enchantment.ModEnchantmentEffects;
 import arsenal.the_crimson_depths.entity.ModEntities;
 import arsenal.the_crimson_depths.items.ModItems;
 import arsenal.the_crimson_depths.particle.CrimsonModParticles;
@@ -19,6 +20,6 @@ public class The_crimson_depths implements ModInitializer {
         ModBlocks.registerModBlocks();
         CrimsonModParticles.registerParticles();
         ModEntities.registerModEntities();
-
+        ModEnchantmentEffects.registerEnchantmentEffects();
     }
 }

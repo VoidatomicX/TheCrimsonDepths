@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-23T12:09:22.2679025	The Crimson Depths/Model Definitions
+// 1.21.1	2026-05-23T18:31:29.3180295	The Crimson Depths/Model Definitions
 738a56d3e54ee73512fdd4fc98c2dd35f22e6ace assets\the_crimson_depths\models\item\resonite_leggings_redstone_trim.json
 021e918dd8ab9eaff0a149c989029faf52191da2 assets\the_crimson_depths\models\item\resonite_helmet_gold_trim.json
 c5f4268cb4f01f5831787c802706c43225bc9405 assets\the_crimson_depths\models\item\resonite_leggings.json
@@ -21,8 +21,8 @@ e3340532e3582c986092296df07d37e185b8bf9f assets\the_crimson_depths\models\item\r
 3a86721573ab2db7f44f675cb2d24c24382354b2 assets\the_crimson_depths\models\item\resonite_boots_redstone_trim.json
 3c460c610402009752df07059c5914e0c3cd79bf assets\the_crimson_depths\models\item\resonite_helmet_amethyst_trim.json
 b31c6416b28628db80fb82b431a8ca28fb0fa924 assets\the_crimson_depths\models\item\resonite_boots_diamond_trim.json
-4da12774fe0d253831c641e353fc315c1014c12c assets\the_crimson_depths\models\item\resonite_leggings_netherite_trim.json
 689ecb9f381acb246f182314b859a6454c842492 assets\the_crimson_depths\models\item\resonite_boots_amethyst_trim.json
+4da12774fe0d253831c641e353fc315c1014c12c assets\the_crimson_depths\models\item\resonite_leggings_netherite_trim.json
 fa87ace333c42f0782a2136605a3d02624cfe190 assets\the_crimson_depths\models\item\resonite_boots.json
 d9cc0f40642e4c83abac72d3d64a060e7fdc08eb assets\the_crimson_depths\models\item\resonite_helmet_iron_trim.json
 5f857633a7bda820acf53a451990725821f6913e assets\the_crimson_depths\models\item\resonite_leggings_emerald_trim.json

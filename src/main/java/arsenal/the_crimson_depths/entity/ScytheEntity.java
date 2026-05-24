@@ -57,7 +57,7 @@ public class ScytheEntity extends PersistentProjectileEntity {
             for (LivingEntity livingEntity : this.getWorld().getEntitiesByClass(LivingEntity.class, this.getBoundingBox(), livingEntity -> this.getOwner() != livingEntity)) {
                 if (!hitEntities.contains(livingEntity)) {
                     livingEntity.damage(this.getWorld().getDamageSources()
-                            .create(DamageTypes.MAGIC, this, this.getOwner()), 12.0f);
+                            .create(DamageTypes.MAGIC, this, this.getOwner()), 9.0f);
                     for (StatusEffectInstance effect : this.effects) {
                         livingEntity.addStatusEffect(effect);
                     }

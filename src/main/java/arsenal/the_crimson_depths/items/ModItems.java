@@ -3,6 +3,7 @@ package arsenal.the_crimson_depths.items;
 import arsenal.the_crimson_depths.The_crimson_depths;
 import arsenal.the_crimson_depths.items.Custom.AnchorItem;
 import arsenal.the_crimson_depths.items.Custom.LanceItem;
+import arsenal.the_crimson_depths.items.Custom.PureResoniteScytheItem;
 import arsenal.the_crimson_depths.items.Custom.ScytheItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -14,7 +15,7 @@ import net.minecraft.util.Identifier;
 public class ModItems {
 //Scythe
     public static final Item Pure_Resonite_Scythe = registerItem("pure_resonite_scythe",
-            new ScytheItem(ResoniteToolMaterials.PURERESONITE, new Item.Settings().fireproof()
+            new PureResoniteScytheItem(ResoniteToolMaterials.PURERESONITE, new Item.Settings().fireproof()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ResoniteToolMaterials.PURERESONITE, 7, -2.5f))));
 
     public static final Item Netherite_Scythe = registerItem("netherite_scythe",
