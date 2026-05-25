@@ -3,18 +3,30 @@ package arsenal.the_crimson_depths.items.Custom;
 import arsenal.the_crimson_depths.entity.ScytheEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.MiningToolItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class PureResoniteScytheItem extends MiningToolItem {
 
     public PureResoniteScytheItem(ToolMaterial toolMaterial, Settings settings) {
         super(toolMaterial, BlockTags.HOE_MINEABLE, settings);
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        tooltip.add(Text.translatable("tooltip.the_crimson_depths.pure_resonite_scythe.tooltip").formatted(Formatting.DARK_RED));
+        super.appendTooltip(stack, context, tooltip, options);
     }
 
     @Override
