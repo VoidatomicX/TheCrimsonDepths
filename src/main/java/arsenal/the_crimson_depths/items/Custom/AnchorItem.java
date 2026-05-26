@@ -6,6 +6,8 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
@@ -19,6 +21,41 @@ public class AnchorItem extends MiningToolItem implements BreakShieldItem {
     public AnchorItem(ToolMaterial toolMaterial, Item.Settings settings) {
         super(toolMaterial, BlockTags.PICKAXE_MINEABLE, settings);
     }
+
+
+    @Override
+    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+
+        target.getWorld().playSound(
+                null,
+                target.getBlockPos(),
+                SoundEvents.ITEM_MACE_SMASH_GROUND_HEAVY,
+                SoundCategory.PLAYERS,
+                1.0F,
+                1.0F
+        );
+
+        target.getWorld().playSound(
+                null,
+                target.getBlockPos(),
+                SoundEvents.BLOCK_NETHERITE_BLOCK_PLACE,
+                SoundCategory.PLAYERS,
+                3.0F,
+                1.0F
+        );
+
+        target.getWorld().playSound(
+                null,
+                target.getBlockPos(),
+                SoundEvents.BLOCK_ANVIL_LAND,
+                SoundCategory.PLAYERS,
+                0.5F,
+                0.5F
+        );
+
+        return super.postHit(stack, target, attacker);
+    }
+
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 
@@ -56,7 +93,7 @@ public class AnchorItem extends MiningToolItem implements BreakShieldItem {
 
         Vec3d rotation = player.getRotationVec(1.0F);
 
-        float speed = 3.0F + riptideLevel;
+        float speed = 0.8F + riptideLevel;
 
         player.addVelocity(
                 rotation.x * speed,
@@ -85,6 +122,7 @@ public class AnchorItem extends MiningToolItem implements BreakShieldItem {
 
         player.incrementStat(Stats.USED.getOrCreateStat(this));
     }
+
 
     @Override
     public int getMaxUseTime(ItemStack stack, LivingEntity user) {
