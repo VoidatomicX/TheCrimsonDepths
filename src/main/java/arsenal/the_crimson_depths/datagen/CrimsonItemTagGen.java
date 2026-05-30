@@ -16,6 +16,7 @@ public class CrimsonItemTagGen extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ItemTags.PICKAXES)
+                .add(ModItems.Pure_Resonite_Anchor)
                 .add(ModItems.Netherite_Anchor)
                 .add(ModItems.Diamond_Anchor)
                 .add(ModItems.Resonite_Anchor)
@@ -24,6 +25,7 @@ public class CrimsonItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.Stone_Anchor);
 
         getOrCreateTagBuilder(ItemTags.HOES)
+                .add(ModItems.Pure_Resonite_Scythe)
                 .add(ModItems.Netherite_Scythe)
                 .add(ModItems.Diamond_Scythe)
                 .add(ModItems.Resonite_Scythe)
@@ -46,6 +48,7 @@ public class CrimsonItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.Gold_Lance)
                 .add(ModItems.Iron_Lance)
                 .add(ModItems.Stone_Lance)
+                .add(ModItems.Pure_Resonite_Scythe)
                 .add(ModItems.Netherite_Scythe)
                 .add(ModItems.Diamond_Scythe)
                 .add(ModItems.Resonite_Scythe)
@@ -60,6 +63,7 @@ public class CrimsonItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.Gold_Lance)
                 .add(ModItems.Iron_Lance)
                 .add(ModItems.Stone_Lance)
+                .add(ModItems.Pure_Resonite_Scythe)
                 .add(ModItems.Netherite_Scythe)
                 .add(ModItems.Diamond_Scythe)
                 .add(ModItems.Resonite_Scythe)
@@ -80,6 +84,7 @@ public class CrimsonItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.Gold_Scythe)
                 .add(ModItems.Iron_Scythe)
                 .add(ModItems.Stone_Scythe)
+                .add(ModItems.Pure_Resonite_Anchor)
                 .add(ModItems.Netherite_Anchor)
                 .add(ModItems.Diamond_Anchor)
                 .add(ModItems.Resonite_Anchor)
@@ -94,6 +99,16 @@ public class CrimsonItemTagGen extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.Resonite_Boots);
 
         getOrCreateTagBuilder(ItemTags.TRIDENT_ENCHANTABLE)
+                .add(ModItems.Pure_Resonite_Anchor)
+                .add(ModItems.Netherite_Anchor)
+                .add(ModItems.Diamond_Anchor)
+                .add(ModItems.Resonite_Anchor)
+                .add(ModItems.Gold_Anchor)
+                .add(ModItems.Iron_Anchor)
+                .add(ModItems.Stone_Anchor);
+
+        getOrCreateTagBuilder(ItemTags.MACE_ENCHANTABLE)
+                .add(ModItems.Pure_Resonite_Anchor)
                 .add(ModItems.Netherite_Anchor)
                 .add(ModItems.Diamond_Anchor)
                 .add(ModItems.Resonite_Anchor)

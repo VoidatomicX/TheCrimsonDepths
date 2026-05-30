@@ -1,0 +1,137 @@
+package arsenal.the_crimson_depths.items.Custom;
+
+import arsenal.the_crimson_depths.api.BreakShieldItem;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.MiningToolItem;
+import net.minecraft.item.ToolMaterial;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.stat.Stats;
+import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.UseAction;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.World;
+
+public class PureResoniteAnchorItem extends MiningToolItem implements BreakShieldItem {
+
+    public PureResoniteAnchorItem(ToolMaterial toolMaterial, Settings settings) {
+        super(toolMaterial, BlockTags.PICKAXE_MINEABLE, settings);
+    }
+
+
+    @Override
+    public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
+
+        target.getWorld().playSound(
+                null,
+                target.getBlockPos(),
+                SoundEvents.ITEM_MACE_SMASH_GROUND_HEAVY,
+                SoundCategory.PLAYERS,
+                1.0F,
+                1.0F
+        );
+
+        target.getWorld().playSound(
+                null,
+                target.getBlockPos(),
+                SoundEvents.BLOCK_NETHERITE_BLOCK_PLACE,
+                SoundCategory.PLAYERS,
+                3.0F,
+                1.0F
+        );
+
+        target.getWorld().playSound(
+                null,
+                target.getBlockPos(),
+                SoundEvents.BLOCK_ANVIL_LAND,
+                SoundCategory.PLAYERS,
+                0.5F,
+                0.5F
+        );
+
+        return super.postHit(stack, target, attacker);
+    }
+
+    @Override
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
+
+        ItemStack stack = user.getStackInHand(hand);
+
+        int riptideLevel = (int) EnchantmentHelper.getTridentSpinAttackStrength(stack, user);
+
+        if (riptideLevel > 0 && user.isTouchingWaterOrRain()) {
+            user.setCurrentHand(hand);
+            return TypedActionResult.consume(stack);
+        }
+
+        return TypedActionResult.pass(stack);
+    }
+
+    @Override
+    public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
+
+        if (!(user instanceof PlayerEntity player)) {
+            return;
+        }
+
+        int useTime = this.getMaxUseTime(stack, user) - remainingUseTicks;
+
+        // Must charge for at least 10 ticks
+        if (useTime < 10) {
+            return;
+        }
+
+        int riptideLevel = (int) EnchantmentHelper.getTridentSpinAttackStrength(stack, player);
+
+        if (riptideLevel <= 0 || !player.isTouchingWaterOrRain()) {
+            return;
+        }
+
+        Vec3d rotation = player.getRotationVec(1.0F);
+
+        float speed = 0.8F + riptideLevel;
+
+        player.addVelocity(
+                rotation.x * speed,
+                rotation.y * speed,
+                rotation.z * speed
+        );
+
+        player.useRiptide(20, 8.0F, stack);
+
+        stack.damage(
+                1,
+                player,
+                LivingEntity.getSlotForHand(player.getActiveHand())
+        );
+
+        world.playSound(
+                null,
+                player.getX(),
+                player.getY(),
+                player.getZ(),
+                SoundEvents.ITEM_TRIDENT_RIPTIDE_3,
+                player.getSoundCategory(),
+                1.0F,
+                1.0F
+        );
+
+        player.incrementStat(Stats.USED.getOrCreateStat(this));
+    }
+
+
+    @Override
+    public int getMaxUseTime(ItemStack stack, LivingEntity user) {
+        return 72000;
+    }
+
+    @Override
+    public UseAction getUseAction(ItemStack stack) {
+        return UseAction.SPEAR;
+    }
+}

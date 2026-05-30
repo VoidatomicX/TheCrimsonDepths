@@ -1,4 +1,5 @@
 {
+  "item.the_crimson_depths.pure_resonite_anchor": "Pure Resonite Anchor",
   "item.the_crimson_depths.netherite_anchor": "Netherite Anchor",
   "item.the_crimson_depths.resonite_anchor": "Resonite Anchor",
   "item.the_crimson_depths.diamond_anchor": "Diamond Anchor",
@@ -6,6 +7,7 @@
   "item.the_crimson_depths.iron_anchor": "Iron Anchor",
   "item.the_crimson_depths.stone_anchor": "Stone Anchor",
 
+  "item.the_crimson_depths.pure_resonite_scythe": "Pure Resonite Scythe",
   "item.the_crimson_depths.netherite_scythe": "Netherite Scythe",
   "item.the_crimson_depths.resonite_scythe": "Resonite Scythe",
   "item.the_crimson_depths.diamond_scythe": "Diamond Scythe",
@@ -19,4 +21,6 @@
   "item.the_crimson_depths.gold_lance": "Gold Lance",
   "item.the_crimson_depths.iron_lance": "Iron Lance",
   "item.the_crimson_depths.stone_lance": "Stone Lance"
+
+
 }

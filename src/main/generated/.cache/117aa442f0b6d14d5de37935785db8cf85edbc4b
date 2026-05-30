@@ -1,9 +1,10 @@
-// 1.21.1	2026-05-23T18:31:29.3170296	The Crimson Depths/Tags for minecraft:item
+// 1.21.1	2026-05-29T19:42:17.4003097	The Crimson Depths/Tags for minecraft:item
 33f607dd28895e731b6a7187cd7d24fda98cf0b8 data\minecraft\tags\item\shovels.json
-f63fdbd3719c8ce2876b1bbb3373a4547c5ff10b data\minecraft\tags\item\hoes.json
-02a910eba099e1d22395ec8415aca24500579150 data\minecraft\tags\item\pickaxes.json
-aa44600e336fb2720f3a33cf42da3d6b7bfb1d1f data\minecraft\tags\item\enchantable\sword.json
-02a910eba099e1d22395ec8415aca24500579150 data\minecraft\tags\item\enchantable\trident.json
-78a7f75857d715b3f3dd6d01cedd1d64f9cc8643 data\minecraft\tags\item\enchantable\fire_aspect.json
-aa44600e336fb2720f3a33cf42da3d6b7bfb1d1f data\minecraft\tags\item\enchantable\sharp_weapon.json
+ab26cb314fe97d8f41892c0e78549db4388c9b66 data\minecraft\tags\item\pickaxes.json
+e0cfd4dd10a646d3160a7845c01d8689d4958efe data\minecraft\tags\item\hoes.json
+2a4995e5d1349d2b8ea894d039e4181d9899cc47 data\minecraft\tags\item\enchantable\sword.json
+ab26cb314fe97d8f41892c0e78549db4388c9b66 data\minecraft\tags\item\enchantable\mace.json
+ab26cb314fe97d8f41892c0e78549db4388c9b66 data\minecraft\tags\item\enchantable\trident.json
+cd38888afe8df88d4d8cb569587f4ce0e89e487c data\minecraft\tags\item\enchantable\fire_aspect.json
+2a4995e5d1349d2b8ea894d039e4181d9899cc47 data\minecraft\tags\item\enchantable\sharp_weapon.json
 a29d15cc03a8a2f824230737ef1e206123793887 data\minecraft\tags\item\trimmable_armor.json

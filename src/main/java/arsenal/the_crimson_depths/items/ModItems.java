@@ -1,10 +1,7 @@
 package arsenal.the_crimson_depths.items;
 
 import arsenal.the_crimson_depths.The_crimson_depths;
-import arsenal.the_crimson_depths.items.Custom.AnchorItem;
-import arsenal.the_crimson_depths.items.Custom.LanceItem;
-import arsenal.the_crimson_depths.items.Custom.PureResoniteScytheItem;
-import arsenal.the_crimson_depths.items.Custom.ScytheItem;
+import arsenal.the_crimson_depths.items.Custom.*;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
@@ -16,7 +13,7 @@ public class ModItems {
 //Scythe
     public static final Item Pure_Resonite_Scythe = registerItem("pure_resonite_scythe",
             new PureResoniteScytheItem(ResoniteToolMaterials.PURERESONITE, new Item.Settings().fireproof()
-                    .attributeModifiers(SwordItem.createAttributeModifiers(ResoniteToolMaterials.PURERESONITE, 7, -2.5f))));
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ResoniteToolMaterials.PURERESONITE, 7, -3f))));
 
     public static final Item Netherite_Scythe = registerItem("netherite_scythe",
             new ScytheItem(ToolMaterials.NETHERITE, new Item.Settings().fireproof()
@@ -72,6 +69,10 @@ public class ModItems {
 
 
 //Anchor
+    public static final Item Pure_Resonite_Anchor = registerItem("pure_resonite_anchor",
+            new PureResoniteAnchorItem(ResoniteToolMaterials.PURERESONITE, new Item.Settings().fireproof()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ResoniteToolMaterials.PURERESONITE, 4, -2.7f))));
+
     public static final Item Netherite_Anchor = registerItem("netherite_anchor",
             new AnchorItem(ToolMaterials.NETHERITE, new Item.Settings().fireproof()
                     .attributeModifiers(PickaxeItem.createAttributeModifiers(ToolMaterials.NETHERITE, 7, -3.1f))));
@@ -134,12 +135,15 @@ public class ModItems {
             entries.add(Gold_Scythe);
             entries.add(Iron_Scythe);
             entries.add(Stone_Scythe);
+
             entries.add(Netherite_Lance);
             entries.add(Diamond_Lance);
             entries.add(Resonite_Lance);
             entries.add(Gold_Lance);
             entries.add(Iron_Lance);
             entries.add(Stone_Lance);
+
+            entries.add(Pure_Resonite_Anchor);
             entries.add(Netherite_Anchor);
             entries.add(Diamond_Anchor);
             entries.add(Resonite_Anchor);
