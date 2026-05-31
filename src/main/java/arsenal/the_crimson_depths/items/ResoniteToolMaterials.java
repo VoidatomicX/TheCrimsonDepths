@@ -4,6 +4,7 @@ import arsenal.the_crimson_depths.util.ModTags;
 import com.google.common.base.Suppliers;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.TagKey;
@@ -13,7 +14,8 @@ import java.util.function.Supplier;
 
 public enum ResoniteToolMaterials implements ToolMaterial {
     RESONITE(ModTags.Blocks.INCORRECT_FOR_RESONITE_TOOL, 1694, 13.0F, 2.0F, 15, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.Resonite_Ingot})),
-    PURERESONITE(ModTags.Blocks.INCORRECT_FOR_RESONITE_TOOL, 2031, 14.0F, 4.5F, 22, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.Resonite_Ingot}));
+    PURERESONITE(ModTags.Blocks.INCORRECT_FOR_RESONITE_TOOL, 2031, 14.0F, 4.5F, 22, () -> Ingredient.ofItems(new ItemConvertible[]{ModItems.Resonite_Ingot})),
+    RELICS(ModTags.Blocks.INCORRECT_FOR_RESONITE_TOOL, 2084, 10.0F, 5.0F, 32, () -> Ingredient.ofItems(new ItemConvertible[]{Items.NETHERITE_INGOT}));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

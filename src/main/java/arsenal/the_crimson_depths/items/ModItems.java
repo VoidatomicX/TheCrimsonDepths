@@ -118,7 +118,11 @@ public class ModItems {
             new ArmorItem(ResoniteArmorMaterials.RESONITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(25))));
 
+//RELICS
 
+    public static final Item Rebellion = registerItem("rebellion",
+            new RebellionItem(ResoniteToolMaterials.RELICS, new Item.Settings()
+                    .attributeModifiers(PickaxeItem.createAttributeModifiers(ResoniteToolMaterials.RELICS, 4, -2.9f))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(The_crimson_depths.MOD_ID, name), item);
@@ -163,6 +167,8 @@ public class ModItems {
          fabricItemGroupEntries.add(Resonite_Chestplate);
          fabricItemGroupEntries.add(Resonite_Leggings);
          fabricItemGroupEntries.add(Resonite_Boots);
+
+         fabricItemGroupEntries.add(Rebellion);
         });
     }
 }

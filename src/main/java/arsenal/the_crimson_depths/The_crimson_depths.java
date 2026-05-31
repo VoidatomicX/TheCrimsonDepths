@@ -5,6 +5,7 @@ import arsenal.the_crimson_depths.enchantment.ModEnchantmentEffects;
 import arsenal.the_crimson_depths.entity.ModEntities;
 import arsenal.the_crimson_depths.items.ModItems;
 import arsenal.the_crimson_depths.particle.CrimsonModParticles;
+import arsenal.the_crimson_depths.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,5 +22,7 @@ public class The_crimson_depths implements ModInitializer {
         CrimsonModParticles.registerParticles();
         ModEntities.registerModEntities();
         ModEnchantmentEffects.registerEnchantmentEffects();
+        ModSounds.registerSounds();
+
     }
 }

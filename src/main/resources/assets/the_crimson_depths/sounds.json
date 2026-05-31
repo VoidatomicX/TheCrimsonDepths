@@ -1,0 +1,14 @@
+{
+  "rebellion_slash": {
+    "subtitle": "sounds.the_crimson_depths.rebellion_slash",
+    "sounds": [
+      "the_crimson_depths:rebellion_slash"
+    ]
+  },
+  "judgement_cut": {
+    "subtitle": "sounds.the_crimson_depths.judgement_cut",
+    "sounds": [
+      "the_crimson_depths:judgement_cut"
+    ]
+  }
+}
