@@ -3,7 +3,6 @@ package arsenal.the_crimson_depths.sound;
 import arsenal.the_crimson_depths.The_crimson_depths;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
